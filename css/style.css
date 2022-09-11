@@ -173,22 +173,45 @@ textarea {
   cursor: pointer;
 }
 .checkbox__area {
-  display: inline-flex;
+  /* display: inline-flex; */
+}
+.terms__check__area a {
+  color: var(--company-color);
+}
+.terms__check__area {
   margin-top: 20px;
   margin-bottom: 30px;
+  /* position: relative; */
+  /* margin-top: 5px;
+  margin-right: 7px;
+  width: 16px;
+  height: 15px; */
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  cursor: pointer;
 }
-.checkbox__area p {
+.terms__check__area span {
+  font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.checkbox__area a {
-  color: var(--company-color);
-}
 .terms__check {
-  margin-top: 5px;
-  margin-right: 7px;
-  width: 16px;
-  height: 15px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.chceckbox__svg {
+  position: absolute;
+  fill: #ffffff;
+  border: 2px solid black;
+  /* background-color: #2196f3; */
+  border-radius: 2px;
+  top: 442px;
+  left: 54px;
+}
+.terms__check_.form__area .chceckbox__svg {
+  background-color: #2196f3;
 }
 .form__svg {
   position: absolute;

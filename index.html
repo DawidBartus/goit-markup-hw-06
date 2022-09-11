@@ -113,15 +113,18 @@
                   placeholder="Wprowadź tekst"
                 ></textarea>
               </label>
-              <div class="checkbox__area">
-                <label for="terms-check">
-                  <input type="checkbox" class="terms__check" id="terms-check"
-                /></label>
-                <p>
+              <!-- <div class="checkbox__area"> -->
+              <label for="terms-check" class="terms__check__area">
+                <input type="checkbox" class="terms__check" id="terms-check" />
+                <svg width="16" height="15" class="chceckbox__svg">
+                  <use href="images/icons.svg#icon-chcek" class="icon"></use>
+                </svg>
+                <span>
                   Oświadczam iż akceptuję <a href="">Regulamin</a> i
                   <a href=""> Politykę Prywatności.</a>
-                </p>
-              </div>
+                </span>
+              </label>
+              <!-- </div> -->
               <button type="submit" class="send__button">Wyślij</button>
             </fieldset>
           </form>
