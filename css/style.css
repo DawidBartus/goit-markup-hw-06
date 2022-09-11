@@ -103,28 +103,33 @@ textarea {
   width: 448px;
 }
 .main__input {
-  display: block;
   width: 446px;
   height: 40px;
-  padding-left: 30px;
+  padding-left: 42px;
   border: 1px solid #21212133;
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 }
-label:focus > .main__input,
-label:hover > .main__input,
-label:hover > textarea,
-label:focus > textarea {
+.main__input:active,
+.main__input:focus,
+.main__input:hover,
+.comment__textarea:active,
+.comment__textarea:focus,
+.comment__textarea:hover {
   border: 1px solid #2196f3;
 }
-label:focus > .form__svg,
-label:hover > .form__svg {
+.main__input:active + .form__svg,
+.main__input:focus + .form__svg,
+.main__input:hover + .form__svg {
   fill: var(--company-color);
 }
+
 .comment {
   display: flex;
   flex-direction: column;
 }
-.comment textarea {
+.comment__textarea {
   display: block;
   padding-left: 18px;
   padding-top: 17px;
@@ -134,8 +139,9 @@ label:hover > .form__svg {
   overflow: scroll top;
   border: 1px solid #21212133;
   border-radius: 4px;
+  outline: none;
 }
-.comment textarea::placeholder {
+.comment__textarea::placeholder {
   color: #75757580;
   font-size: 12px;
   letter-spacing: 0.01em;
@@ -187,6 +193,7 @@ label:hover > .form__svg {
 .form__svg {
   position: absolute;
   fill: #212121;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main__label:first-of-type .form__svg {
   top: 107px;

@@ -73,37 +73,39 @@
             <fieldset class="form__area">
               <label for="name" class="main__label">
                 Imie
-                <svg width="12" height="12" class="form__svg form__svg1">
+                <input type="text" name="name" class="main__input" id="name" />
+                <svg width="12" height="12" class="form__svg">
                   <use href="images/icons.svg#icon-person"></use>
                 </svg>
-                <input type="text" name="name" class="main__input" id="name" />
               </label>
               <label for="phone-number" class="main__label">
                 Telefon
-                <svg width="13" height="13" class="form__svg">
-                  <use href="images/icons.svg#icon-phone"></use>
-                </svg>
                 <input
                   type="tel"
                   name="number"
                   class="main__input"
                   id="phone-number"
-              /></label>
+                />
+                <svg width="13" height="13" class="form__svg">
+                  <use href="images/icons.svg#icon-phone"></use>
+                </svg>
+              </label>
               <label for="email-adress" class="main__label">
                 Email
-                <svg width="15" height="12" class="form__svg">
-                  <use href="images/icons.svg#icon-mail"></use>
-                </svg>
                 <input
                   type="email"
                   name="email"
                   class="main__input"
                   id="email-adress"
                 />
+                <svg width="15" height="12" class="form__svg">
+                  <use href="images/icons.svg#icon-mail"></use>
+                </svg>
               </label>
               <label for="comment" class="comment">
                 Komentarz
                 <textarea
+                  class="comment__textarea"
                   name="comment"
                   id="comment"
                   cols="10"
