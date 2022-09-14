@@ -73,7 +73,14 @@
             <fieldset class="form__area">
               <label for="name" class="main__label">
                 Imie
-                <input type="text" name="name" class="main__input" id="name" />
+                <input
+                  type="text"
+                  name="name"
+                  class="main__input"
+                  id="name"
+                  minlength="3"
+                  required
+                />
                 <svg width="12" height="12" class="form__svg">
                   <use href="images/icons.svg#icon-person"></use>
                 </svg>
@@ -85,6 +92,7 @@
                   name="number"
                   class="main__input"
                   id="phone-number"
+                  required
                 />
                 <svg width="13" height="13" class="form__svg">
                   <use href="images/icons.svg#icon-phone"></use>
@@ -97,6 +105,7 @@
                   name="email"
                   class="main__input"
                   id="email-adress"
+                  required="@"
                 />
                 <svg width="15" height="12" class="form__svg">
                   <use href="images/icons.svg#icon-mail"></use>
@@ -534,7 +543,12 @@
           <p class="footer__font">ZAPISZ SIĘ DO NEWSLETTERA</p>
           <div class="newsletter__mail__section">
             <label for="email-adress-2" class="newsletter__label">
-              <input type="email" placeholder="E-mail" id="email-adress-2" />
+              <input
+                type="email"
+                name="newsletter-mail"
+                placeholder="E-mail"
+                id="email-adress-2"
+              />
             </label>
             <button type="submit" class="newsletter__button">
               <span>Zapisz się</span>
