@@ -23,20 +23,24 @@
     <header>
       <div class="container">
         <nav class="navigation">
-          <a href="index.html" class="logo"
+          <a href="index.html" class="navigation__logo"
             ><span class="logo__blue">Web</span>Studio</a
           >
           <ul class="menu list">
-            <li><a href="index.html" class="menu__a">Agencja</a></li>
             <li>
-              <a href="portfolio.html" class="menu__a__active">Portfolio</a>
+              <a href="index.html" class="menu__a">Agencja</a>
+            </li>
+            <li>
+              <a href="portfolio.html" class="menu__a menu__a--active"
+                >Portfolio</a
+              >
             </li>
             <li><a href="kontakt.html" class="menu__a">Kontakt</a></li>
           </ul>
         </nav>
         <ul class="contact list">
           <li class="contact__list">
-            <a href="mailto:info@devstudio.com" class="header__contact__a"
+            <a href="mailto:info@devstudio.com" class="contact__a"
               ><svg width="16" height="12" class="contact__svg">
                 <use href="images/icons.svg#icon-envelope"></use>
               </svg>
@@ -44,7 +48,7 @@
             >
           </li>
           <li>
-            <a href="tel:+48111111111" class="header__contact__a header__phone"
+            <a href="tel:+48111111111" class="contact__a header__phone"
               ><svg width="10" height="16" class="contact__svg">
                 <use href="images/icons.svg#icon-smartphone-1"></use>
               </svg>
@@ -74,7 +78,7 @@
               <button type="button" class="portfolio__button">Marketing</button>
             </li>
           </ul>
-          <ul class="p__list list">
+          <ul class="portfolio__list list">
             <li>
               <a href="#" class="portfolio__list__a">
                 <div class="overlay">
@@ -301,32 +305,32 @@
             </li>
           </ul>
         </div>
-        <div class="social__media">
+        <div class="footer__media__section">
           <h3 class="footer__font">DOŁĄCZ DO NAS</h3>
-          <ul class="list">
+          <ul class="list footer__media__list">
             <li class="">
-              <a href="" class="footer__social__media">
+              <a href="" class="footer__media__icon">
                 <svg width="20" height="20" class="footer__social__svg">
                   <use href="images/icons.svg#icon-instagram-2"></use>
                 </svg>
               </a>
             </li>
             <li class="">
-              <a href="" class="footer__social__media">
+              <a href="" class="footer__media__icon">
                 <svg width="20" height="20" class="footer__social__svg">
                   <use href="images/icons.svg#icon-twitter-1"></use>
                 </svg>
               </a>
             </li>
             <li class="">
-              <a href="" class="footer__social__media">
+              <a href="" class="footer__media__icon">
                 <svg width="20" height="20" class="footer__social__svg">
                   <use href="images/icons.svg#icon-facebook-1"></use>
                 </svg>
               </a>
             </li>
             <li class="">
-              <a href="" class="footer__social__media">
+              <a href="" class="footer__media__icon">
                 <svg width="20" height="20" class="footer__social__svg">
                   <use href="images/icons.svg#icon-linkedin-1"></use>
                 </svg>
@@ -337,16 +341,18 @@
         <div class="newsletter__section">
           <p class="footer__font">ZAPISZ SIĘ DO NEWSLETTERA</p>
           <div class="newsletter__mail__section">
-            <label for="email-adress-2" class="newsletter__label"
-              ><input
+            <label for="email-adress-2" class="newsletter__label">
+              <input
                 type="email"
-                placeholder="E-mail"
                 name="newsletter-mail"
+                placeholder="E-mail"
                 id="email-adress-2"
-            /></label>
+                class="newsletter__input"
+              />
+            </label>
             <button type="submit" class="newsletter__button">
-              <span>Zapisz się</span
-              ><svg width="24" height="24" class="newsletter__svg">
+              <span>Zapisz się</span>
+              <svg width="24" height="24" class="newsletter__svg">
                 <use href="images/icons.svg#icon-send"></use>
               </svg>
             </button>

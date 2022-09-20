@@ -72,7 +72,7 @@ header {
   z-index: 1;
 }
 /* Form section */
-.main__input,
+.form__input,
 textarea {
   margin-top: 4px;
 }
@@ -99,7 +99,7 @@ textarea {
   align-items: center;
   width: 448px;
 }
-.main__input {
+.form__input {
   width: 446px;
   height: 40px;
   padding-left: 42px;
@@ -108,22 +108,23 @@ textarea {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
 }
-.main__input:active,
-.main__input:focus,
-.main__input:hover,
+.form__input:active,
+.form__input:focus,
+.form__input:hover,
 .comment__textarea:active,
 .comment__textarea:focus,
 .comment__textarea:hover {
   border: 1px solid #2196f3;
 }
-.main__input:active + .form__svg,
-.main__input:focus + .form__svg,
-.main__input:hover + .form__svg {
+.form__input:active + .form__svg,
+.form__input:focus + .form__svg,
+.form__input:hover + .form__svg {
   fill: var(--company-color);
 }
 .comment {
   display: flex;
   flex-direction: column;
+  color: var(--grey-color);
 }
 .comment__textarea {
   display: block;
@@ -144,15 +145,13 @@ textarea {
   letter-spacing: 0.01em;
   font-weight: 400;
 }
-.main__label {
+.form__label {
   margin-bottom: 10px;
   width: 448px;
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1.16;
   font-size: 12px;
-}
-.form__area label {
   color: var(--grey-color);
 }
 .send__button {
@@ -172,10 +171,10 @@ textarea {
 .checkbox__area {
   display: inline-flex;
 }
-.terms__check__area a {
+.checkbox__link {
   color: var(--company-color);
 }
-.terms__check__area {
+.checkbox__terms {
   margin-top: 20px;
   margin-bottom: 30px;
   line-height: 1.71;
@@ -183,7 +182,7 @@ textarea {
   cursor: pointer;
   font-size: 14px;
 }
-.terms__check {
+.checkbox__check {
   appearance: none;
   -webkit-appearance: none;
 }
@@ -193,7 +192,7 @@ textarea {
   bottom: 118px;
   left: 51px;
 }
-.terms__check__area::before {
+.checkbox__terms::before {
   width: 16px;
   height: 15px;
   border: 2px solid var(--dark-grey);
@@ -206,7 +205,7 @@ textarea {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.terms__check:checked + .terms__check__area::before {
+.checkbox__check:checked + .checkbox__terms::before {
   background-color: var(--company-color);
   border: none;
 }
@@ -215,15 +214,15 @@ textarea {
   fill: var(--dark-grey);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.main__label:first-of-type .form__svg {
+.form__label:first-of-type .form__svg {
   top: 107px;
   left: 55px;
 }
-.main__label:nth-child(2) .form__svg {
+.form__label:nth-child(2) .form__svg {
   top: 174px;
   left: 54.3px;
 }
-.main__label:nth-child(3) .form__svg {
+.form__label:nth-child(3) .form__svg {
   top: 243px;
   left: 53.5px;
 }
@@ -240,7 +239,7 @@ textarea {
   box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
     0px 1px 3px 0px #0000001f;
 }
-.order__button_svg {
+.close__button_svg {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -279,14 +278,10 @@ textarea {
 .menu__a:focus {
   color: var(--company-color);
 }
-.menu__a__active {
+.menu__a--active {
   color: var(--company-color);
-  text-decoration: none;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  font-weight: 500;
 }
-.menu__a__active::after {
+.menu__a--active::after {
   content: "";
   display: block;
   transform: translateY(27px);
@@ -298,7 +293,7 @@ textarea {
 .menu li:nth-child(2) {
   margin: 0 48px;
 }
-.logo {
+.navigation__logo {
   text-decoration: none;
   font-family: "Raleway";
   font-weight: 700;
@@ -321,7 +316,7 @@ textarea {
   line-height: 1.19;
   margin-bottom: 20px;
 }
-.header__contact__a {
+.contact__a {
   text-decoration: none;
   font-weight: 500;
   line-height: 1.14;
@@ -334,8 +329,8 @@ textarea {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header__contact__a:hover,
-.header__contact__a:focus {
+.contact__a:hover,
+.contact__a:focus {
   color: var(--company-color);
   fill: var(--company-color);
 }
@@ -385,7 +380,7 @@ footer .container {
   margin-left: 78px;
   width: 570px;
 }
-.newsletter__label input {
+.newsletter__input {
   width: 358px;
   height: 50px;
   background-color: var(--section-bg-color);
@@ -551,7 +546,7 @@ footer .container {
   display: flex;
   gap: 30px;
 }
-.clients__section h2 {
+.clients__header {
   margin: 0 auto;
   font-size: 36px;
   margin-bottom: 50px;
@@ -566,7 +561,7 @@ footer .container {
   gap: 8px;
   margin-bottom: 50px;
 }
-.p__list {
+.portfolio__list {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -678,7 +673,7 @@ footer .container {
   width: inherit;
   height: inherit;
 }
-.social__media__icon {
+.team__media__icon {
   width: 44px;
   height: 44px;
   background-color: #ffffff;
@@ -688,13 +683,13 @@ footer .container {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social__media__icon:hover,
-.social__media__icon:focus {
+.team__media__icon:hover,
+.team__media__icon:focus {
   background-color: var(--company-color);
   fill: #ffffff;
   cursor: pointer;
 }
-.social__media {
+.footer__media__section {
   margin-left: 70px;
 }
 .footer__font {
@@ -703,17 +698,17 @@ footer .container {
   line-height: 1.13em;
   font-weight: 700;
 }
-.social__media ul {
+.footer__media__list {
   display: flex;
   gap: 10px;
 }
 .lorem__svg__element {
   margin: auto;
 }
-.social__media__svg {
+.team__media__svg {
   margin: auto;
 }
-.footer__social__media {
+.footer__media__icon {
   width: 44px;
   height: 44px;
   background-color: #ffffff1a;
@@ -722,8 +717,8 @@ footer .container {
   fill: #afb1b8;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer__social__media:hover,
-.footer__social__media:focus {
+.footer__media__icon:hover,
+.footer__media__icon:focus {
   background-color: var(--company-color);
   cursor: pointer;
 }
